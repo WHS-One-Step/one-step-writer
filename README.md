@@ -55,3 +55,4 @@ void write_stop_pin() {
 ## Frameworks:
 No frameworks were used in these writing optimizations, however a major library named [wiringPi](https://www.github.com/WiringPi/WiringPi) was used, providing low level access.
 - Additionally, **gcc**, a C compiler, was used to compile the code into a shared library for [one-step-joint](https://www.github.com/whs-one-step/one-step-joint) to use.
+- **This repository is programmed in C, a low level language permitting access to hardware and memory. This was used for extreme performance in a project where performance is important, potentially leading to injury in cases where performance lacks.**
