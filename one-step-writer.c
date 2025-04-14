@@ -25,11 +25,18 @@ int status[] = {0, 0, 0, 0, 0, 0, 0, 0};
 
 
 // Methods:
+/**
+    @brief Initializes the Wiring Pi library.
+*/
 void initialize_optimizations() {
     // Initialization:
     wiringPiSetupGpio();
 }
 
+
+/**
+    @brief Initializes each pin as an OUTPUT pin and sets their default state to LOW.
+*/
 void initialize_pins() {
     // Initialization:
     for (int iteration = 0; iteration < 8; iteration++) {
@@ -42,6 +49,11 @@ void initialize_pins() {
     pullUpDnControl(STOP_PIN, PUD_DOWN);
 }
 
+/**
+    @brief Converts a number to a binary string.
+
+    @param number The number to represent as binary.
+*/
 char* number_to_binary(unsigned char number) {
     // Variables (Assignment):
     // Binary:
@@ -61,6 +73,11 @@ char* number_to_binary(unsigned char number) {
     return binary;
 }
 
+/**
+    @brief Writes pulse modulation to GPIO pins to represent binary.
+
+    @param pulse_modulation The pulse modulation to represent as binary.
+*/
 void write_pulse_modulation(int pulse_modulation) {
     // Variables (Assignment):
     // Binary:
@@ -84,6 +101,9 @@ void write_pulse_modulation(int pulse_modulation) {
     free(binary);
 }
 
+/**
+    @brief Activates the STOP pin and clears the other pins.
+*/
 void write_stop_pin() {
     for (int iteration = 0; iteration < 8; iteration++) {
         digitalWrite(pins[iteration], LOW);
