@@ -5,6 +5,7 @@ This repository contains the official source code pertaining to the GPIO writer 
 > $ sudo apt install ./wiringpi_3.14_arm64.deb
 
 ## Compilation:
+The following code can be compiled into a shared library by using the following command in a Linux terminal.
 > $ gcc -fPIC -shared -o one-step-writer.so one-step-writer.c -lm -l wiringPi
 
 This code is not meant to be executed as a lone-program, and is instead a major component in [one-step-joint](https://www.github.com/whs-one-step/one-step-joint)
